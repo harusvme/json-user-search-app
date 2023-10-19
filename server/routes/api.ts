@@ -12,7 +12,7 @@ router.post("/search", async (req, res) => {
       return res.status(400).json({ error: "Invalid input data" });
     }
 
-    const filteredUsers = await usersController.searchUsers(email, number); // Вызывайте контроллер с использованием ключевого слова `await`
+    const filteredUsers = await usersController.searchUsers(email, number);
 
     res.json(filteredUsers);
   } catch (error) {
